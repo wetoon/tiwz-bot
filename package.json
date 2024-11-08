@@ -7,6 +7,7 @@
     "build:app": "npx eslint ./src/index.ts && bun build --compile --minify-whitespace --minify-syntax --target bun --outfile ./dist/tiwz ./src/index.ts",
     "build:com": "npx eslint ./src/slash.ts && bun build --compile --minify-whitespace --minify-syntax --target bun --outfile ./dist/init ./src/slash.ts",
     "dev": "bun run --watch slash.ts & bun run --watch index.ts",
+    "test": "node .dist/slash.js & node ./dist/index.js",
     "start": "./dist/init && ./dist/tiwz"
   },
   "repository": {
