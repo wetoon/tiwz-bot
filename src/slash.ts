@@ -23,4 +23,4 @@ const rest = new REST({ version: '10' }).setToken( env.get('app.token') );
 
 console.log('Started refreshing application (/) commands.');
 await rest.put( Routes.applicationCommands( env.get('app.client') ), { body } );
-console.log('Successfully reloaded application (/) commands.');
+console.log('Successfully reloaded application (/) commands.\n');
