@@ -1,0 +1,40 @@
+{
+  "name": "@tiwz/bot",
+  "version": "1.0.0",
+  "description": "Discord Application ( BOT )",
+  "main": "tiwz",
+  "scripts": {
+    "build:app": "npx eslint ./src/index.ts && bun build --compile --minify-whitespace --minify-syntax --target bun --outfile ./dist/tiwz ./src/index.ts",
+    "build:com": "npx eslint ./src/slash.ts && bun build --compile --minify-whitespace --minify-syntax --target bun --outfile ./dist/init ./src/slash.ts",
+    "dev": "bun run --watch slash.ts & bun run --watch index.ts",
+    "start": "./dist/init && ./dist/tiwz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wetoon/tiwz-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "music",
+    "song"
+  ],
+  "author": "Mr.Tiwz",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/wetoon/tiwz-bot/issues"
+  },
+  "homepage": "https://github.com/wetoon/tiwz-bot#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "config": "^3.3.12",
+    "discord-player": "^6.7.1",
+    "discord.js": "^14.16.3",
+    "play-dl": "^1.9.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.13",
+    "@types/config": "^3.3.5"
+  }
+}
